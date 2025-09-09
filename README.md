@@ -13,3 +13,7 @@ A Vencord(VC) plugin that plays a sound when user tries to speak while muted.
 -   Set Audio volume
 -   Set delay between audio notifications
 -   Display/Hide a custom button to toggle On/Off the audio notifications
+
+## Preview:
+
+<img width="278" height="56" alt="Screenshot 2025-09-08 160332" src="https://github.com/user-attachments/assets/2d04b44d-af97-459c-b4d8-133444af7074" />
