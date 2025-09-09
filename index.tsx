@@ -13,7 +13,7 @@ import { MediaEngineStore } from "./stores";
 
 let isPlaying = false;
 let audio: HTMLAudioElement | undefined;
-const defaultAudioUrl = "https://raw.githubusercontent.com/nicola02nb/BetterDiscord-Stuff/main/Plugins/NotifyWhenMuted/stop_talking.wav";
+const defaultAudioUrl = "https://raw.githubusercontent.com/nicola02nb/notifyWhenMuted/main/stop_talking.wav";
 const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
 export default definePlugin({
