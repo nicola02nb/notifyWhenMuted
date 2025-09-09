@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { Devs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { React } from "@webpack/common";
 
@@ -20,7 +19,10 @@ const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 export default definePlugin({
     name: "NotifyWhenMuted",
     description: "Plays a sound when user tries to speak while muted.",
-    authors: [Devs.nicola02nb],
+    authors: [{
+        name: "nicola02nb",
+        id: 257900031351193600n
+    }],
     settings,
     patches: [
         {
