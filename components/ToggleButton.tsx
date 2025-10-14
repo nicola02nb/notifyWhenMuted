@@ -23,7 +23,7 @@ export const ToggleButton = () => {
 
     return <Tooltip text={enabled ? "Disable Notify When Muted" : "Enable Notify When Muted"}>
         {({ onMouseEnter, onMouseLeave }) => (
-            <Button size={Button.Sizes.ICON} look={Button.Looks.BLANK} color={Button.Colors.BRAND} className={`toggleNotifyMuted ${buttonStates.button} ${buttonStates.enabled}`} onClick={toggle} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <Button size={Button.Sizes.MIN} look={Button.Looks.LINK} color={Button.Colors.TRANSPARENT} className={`toggleNotifyMuted ${buttonStates.button} ${buttonStates.enabled}`} onClick={toggle} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <Icon enabled={enabled} />
             </Button>
         )}
