@@ -29,13 +29,14 @@ export const settings = definePluginSettings({
         default: "defaultAudioUrl"
     },
     audioVolume: {
-        type: OptionType.NUMBER,
+        type: OptionType.SLIDER,
         description: "Audio Volume. Sets audio volume.",
+        markers: [0, 20, 40, 60, 80, 100],
         default: 100,
-        min: 0,
-        max: 100,
-        step: 1,
-        units: "%"
+        componentProps: {
+            stickToMarkers: false,
+            onValueRender: null, // Defaults to percentage
+        },
     },
     delayBetweenNotifications: {
         type: OptionType.NUMBER,
