@@ -6,13 +6,12 @@
 
 import "./ToggleButton.css";
 
-import { findByPropsLazy } from "@webpack";
-import { Button, Tooltip, useState } from "@webpack/common";
+import { Tooltip, useState } from "@webpack/common";
 
 import { settings } from "../settings";
 import { Icon } from "./Icon";
+import { Button } from "@components/Button";
 
-const buttonStates = findByPropsLazy("enabled", "button");
 
 export const ToggleButton = () => {
     const [enabled, setEnabled] = useState(settings.store.notifyEnabled);
@@ -23,7 +22,7 @@ export const ToggleButton = () => {
 
     return <Tooltip text={enabled ? "Disable Notify When Muted" : "Enable Notify When Muted"}>
         {({ onMouseEnter, onMouseLeave }) => (
-            <Button size={Button.Sizes.MIN} look={Button.Looks.LINK} color={Button.Colors.TRANSPARENT} className={`toggleNotifyMuted ${buttonStates.button} ${buttonStates.enabled}`} onClick={toggle} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <Button size={"min"} variant="none" className={`toggleNotifyMuted`} onClick={toggle} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                 <Icon enabled={enabled} />
             </Button>
         )}
